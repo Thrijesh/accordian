@@ -1,0 +1,130 @@
+.accordian {
+    width: 100%;
+    height: fit-content;
+    padding: .5rem 1rem;
+}
+
+.accordian_header {
+    height: fit-content;
+    padding: 1rem;
+    border: solid .1rem #ccc;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.accordian_header header {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.active {
+    background-color: black;
+    color: #FFF;
+}
+
+.accordian_body {
+    width: 100%;
+    padding: 1rem;
+}
+
+.accordian_body_address {
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordian_body_address p {
+    font-weight: 600;
+    color: #212529;
+    font-size: .8rem;
+    margin: 0;
+}
+
+.accordian_body_address_btn_container {
+    display: flex;
+}
+
+.accordian_body_address_btn_container button {
+    cursor: pointer;
+}
+
+.accordian_body_address_btn_container button:hover {
+    color: grey;
+}
+
+.accordian_body_address button {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.accordian_body_details {
+    margin-top: 1rem;
+    width: 70%;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.accordian_body_details_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordian_body_details_header {
+    /* width: 35%; */
+    height: 100%;
+}
+
+.accordian_body_details_header header {
+    padding: .5rem 0;
+    font-weight: 700;
+    color: #212529;
+    font-size: .8rem;
+}
+
+.accordian_body_details_values header {
+    text-align: right;
+    display: block;
+    padding: .5rem 0;
+    font-weight: 500;
+    color: #212529;
+    font-size: .7rem;
+}
+
+@media (max-width:320px) {
+    .accordian {
+        padding: .5rem 0;
+    }
+
+    .accordian_body_details {
+        width: 100%;
+    }
+
+    .accordian_body {
+        padding: 0.5rem;
+    }
+    .accordian_body_details {
+        padding: .5rem;
+    }
+}
+  
+@media (max-width: 768px) {
+    .accordian {
+        padding: .5rem 0;
+    }
+
+    .accordian_body {
+        padding: 0.5rem;
+    }
+    .accordian_body_details {
+        width: 100%;
+    }
+    .accordian_body_details {
+        padding: .5rem;
+    }
+}
