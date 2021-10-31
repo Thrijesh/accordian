@@ -14,11 +14,28 @@ function AccordianContainer() {
       setActiveId(id);
     }
   }
-    return (
-        <div className="accordian_container">
+  const objToArray = Object.entries(data[0].config.zoneConfig).map(e => {
+    return {
+      id: e[0],
+      details: e[1]
+    }
+  })
+
+  console.log(objToArray)
+
+  
+  return (
+    <div className="accordian_container">
             {
-                data.map((list, i)=> {
-                    return <Accordian key={list.header} data={list} id={i + 1} toggleActive={toggleActive} activeId={activeId}/>
+              objToArray.map((list, i)=> {
+                  const plansToArray = Object.entries(list.details.plans).map(e => {
+                    return {
+                      id: e[0],
+                      plans: e[1]
+                    }
+                  })
+                  console.log(plansToArray)
+                    return <Accordian key={list.id} data={list} plans={plansToArray} toggleActive={toggleActive} activeId={activeId}/>
                 })
             }
         </div>
